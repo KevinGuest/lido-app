@@ -4,7 +4,7 @@ name: Lido
 tagline: "#2BGA"
 icon: https://cdn.discordapp.com/app-icons/1526849434456035378/600ce66d3b8fa3b623a2d4b421d09287.png?size=256
 category: bitcoin
-version: "0.1.2"
+version: "0.1.3"
 port: 3000
 description: >-
   Lido is an open-source, solo Bitcoin mining application that lets you run your
@@ -34,9 +34,28 @@ repo: https://github.com/KevinGuest/lido-app
 support: https://github.com/KevinGuest/lido-app/issues
 gallery: []
 releaseNotes: >-
-  Live pool charts, date range picker, and UI polish.
+  Add home screen widget: hash rate, miners, blocks found, and block height.
 dependencies:
   - bitcoin
 path: ""
 defaultUsername: ""
 defaultPassword: ""
+widgets:
+  - id: "stats"
+    type: "four-stats"
+    refresh: "5s"
+    endpoint: "widget-server:3000/widgets/pool"
+    link: ""
+    example:
+      type: "four-stats"
+      link: ""
+      items:
+        - title: "Hash Rate"
+          text: "968"
+          subtext: "GH/s"
+        - title: "Miners"
+          text: "1"
+        - title: "Blocks Found"
+          text: "1"
+        - title: "Block Height"
+          text: "883453"
