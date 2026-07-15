@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: ghcr.io/kevinguest/lido-ui:0.1.3
+    image: ghcr.io/kevinguest/lido-ui:0.1.4
     restart: on-failure
     stop_grace_period: 30s
     environment:
@@ -20,7 +20,7 @@ services:
 
   server:
     # Our Nest pool fork (not upstream benjamin-wilson/public-pool)
-    image: ghcr.io/kevinguest/lido:0.1.3
+    image: ghcr.io/kevinguest/lido:0.1.4
     restart: on-failure
     stop_grace_period: 30s
     ports:
