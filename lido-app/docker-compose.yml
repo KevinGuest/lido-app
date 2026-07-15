@@ -1,0 +1,52 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      # Umbrel names containers: <app-id>_<service>_1
+      APP_HOST: lido-app_proxy_1
+      APP_PORT: 80
+      PROXY_AUTH_WHITELIST: "/api/*"
+
+  web:
+    image: ghcr.io/kevinguest/lido-ui:0.1.1
+    restart: on-failure
+    stop_grace_period: 30s
+    environment:
+      - DOMAIN=$DEVICE_DOMAIN_NAME
+      # Next SSR talks to the pool on the Docker network; browser /api goes via nginx.
+      - PUBLIC_POOL_API_URL=http://lido-app_server_1:2019
+      - PUBLIC_POOL_STRATUM_URL=${DEVICE_DOMAIN_NAME}:3333
+
+  server:
+    # Our Nest pool fork (not upstream benjamin-wilson/public-pool)
+    image: ghcr.io/kevinguest/lido:0.1.1
+    restart: on-failure
+    stop_grace_period: 30s
+    ports:
+      - "3333:3333/tcp"
+    volumes:
+      - "${APP_DATA_DIR}/data/database:/public-pool/DB"
+    environment:
+      - NODE_ENV=production
+      - BITCOIN_RPC_URL=http://${APP_BITCOIN_NODE_IP}
+      - BITCOIN_RPC_USER=${APP_BITCOIN_RPC_USER}
+      - BITCOIN_RPC_PASSWORD=${APP_BITCOIN_RPC_PASS}
+      - BITCOIN_RPC_PORT=${APP_BITCOIN_RPC_PORT}
+      - BITCOIN_RPC_TIMEOUT=10000
+      - API_PORT=2019
+      - STRATUM_PORT=3333
+      - NETWORK=mainnet
+      - API_SECURE=false
+      - ENABLE_SOLO=true
+      - ENABLE_PROXY=false
+      - POOL_IDENTIFIER="Lido on Umbrel"
+
+  proxy:
+    image: nginx:1.25.3@sha256:4c0fdaa8b6341bfdeca5f18f7837462c80cff90527ee35ef185571e1c327beac
+    volumes:
+      - ${APP_DATA_DIR}/data/proxy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - web
+      - server
+    restart: on-failure

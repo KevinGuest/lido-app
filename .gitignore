@@ -1,0 +1,9 @@
+# agent / editor assistant docs
+AGENTS.md
+CLAUDE.md
+**/AGENTS.md
+**/CLAUDE.md
+
+.DS_Store
+Thumbs.db
+*.log

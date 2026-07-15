@@ -1,0 +1,42 @@
+manifestVersion: 1
+id: lido-app
+name: Lido
+tagline: "#2BGA"
+icon: https://cdn.discordapp.com/app-icons/1526849434456035378/600ce66d3b8fa3b623a2d4b421d09287.png?size=256
+category: bitcoin
+version: "0.1.1"
+port: 3000
+description: >-
+  Lido is an open-source, solo Bitcoin mining application that lets you run your
+  own pool using your own node. Instead of relying on centralized pools, Lido
+  enables your mining hardware to submit work to your personal setup, ensuring
+  that you have full control over your mining operation. If you successfully
+  mine a block, you receive the entire block reward. No splitting with other
+  miners. No fees. No middleman.
+
+
+  Lido is a Fully Open Source Solo Bitcoin Mining Pool fork of Public Pool.
+
+
+  On umbrelOS, Lido requires the Bitcoin app and is automatically configured to
+  work with your Bitcoin node—no extra setup required. Simply install Bitcoin,
+  then Lido, and it's ready to go.
+
+
+  To start mining, just point your mining hardware to your Lido instance using
+  the stratum details provided in the app. Monitor hashrate, connected workers,
+  network difficulty, and more from the dashboard.
+developer: Lakeshore
+website: https://github.com/KevinGuest/lido-app
+submitter: Kevin Guest
+submission: https://github.com/KevinGuest/lido-app
+repo: https://github.com/KevinGuest/lido-app
+support: https://github.com/KevinGuest/lido-app/issues
+gallery: []
+releaseNotes: >-
+  Initial release. Stratum on port 3333. Dashboard mockup: https://kevinguest.github.io/lido-ui/
+dependencies:
+  - bitcoin
+path: ""
+defaultUsername: ""
+defaultPassword: ""
