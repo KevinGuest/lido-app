@@ -25,6 +25,7 @@ services:
     stop_grace_period: 30s
     ports:
       - "3333:3333/tcp"
+      - "4444:4444/tcp"
     volumes:
       - "${APP_DATA_DIR}/data/database:/public-pool/DB"
     environment:
@@ -36,6 +37,8 @@ services:
       - BITCOIN_RPC_TIMEOUT=10000
       - API_PORT=2019
       - STRATUM_PORT=3333
+      - ENABLE_STRATUM_V2=true
+      - STRATUM_V2_PORT=4444
       - NETWORK=mainnet
       - API_SECURE=false
       - ENABLE_SOLO=true
