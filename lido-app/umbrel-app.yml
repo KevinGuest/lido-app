@@ -4,7 +4,7 @@ name: Lido
 tagline: "#2BGA"
 icon: https://cdn.discordapp.com/app-icons/1526849434456035378/cc8d9a154117cbd3456624858a51629e.png?size=256
 category: bitcoin
-version: "0.1.26"
+version: "0.1.27"
 port: 3000
 description: >-
   Lido is an open-source, solo Bitcoin mining application that lets you run your
@@ -26,7 +26,7 @@ description: >-
   To start mining, just point your mining hardware to your Lido instance using
   the stratum details provided in the app. Monitor hashrate, connected workers,
   network difficulty, and more from the dashboard.
-developer: Lakeshore
+developer: Lido
 website: https://github.com/KevinGuest/lido-app
 submitter: Kevin Guest
 submission: https://github.com/KevinGuest/lido-app
@@ -34,7 +34,8 @@ repo: https://github.com/KevinGuest/lido-app
 support: https://github.com/KevinGuest/lido-app/issues
 gallery: []
 releaseNotes: >-
-  Show Stratum V1/V2 in miner details.
+  Developer credited as Lido. Pool 0.1.13 fixes SV2 share rejects
+  (BIP320 version rolling) on Bitaxe / NerdQAxe.
 dependencies:
   - bitcoin
 path: ""
