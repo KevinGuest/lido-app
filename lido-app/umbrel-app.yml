@@ -4,7 +4,7 @@ name: Lido
 tagline: "#2BGA"
 icon: https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/icon.png
 category: bitcoin
-version: "0.1.35"
+version: "0.1.36"
 port: 2300
 description: >-
   Lido is an open-source, solo Bitcoin mining application that lets you run your
@@ -44,8 +44,8 @@ gallery:
   - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/gallery-2880/3.png
   - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/gallery-2880/4.png
 releaseNotes: >-
-  Fix nginx pre-start hook writing to APP_DATA_DIR (fixes Settings 502).
-  UI shows a clear error instead of fake-off toggles when settings cannot load.
+  Route Settings logs/notifications through the UI server (fixes 502 on stale nginx).
+  Includes nginx APP_DATA_DIR hook fix from 0.1.35. UI 0.1.32 + pool 0.1.18.
 dependencies:
   - bitcoin
 path: ""
