@@ -14,4 +14,4 @@ https://github.com/KevinGuest/lido-app
 
 Then install **Lido**.
 
-Stratum V1 port: **3333** · Stratum V2 port: **4444**
+Stratum V1 port: **2301** · Stratum V2 port: **2302** · Web: **2300**

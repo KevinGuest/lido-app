@@ -16,7 +16,7 @@ services:
       - DOMAIN=$DEVICE_DOMAIN_NAME
       # Next SSR talks to the pool on the Docker network; browser /api goes via nginx.
       - PUBLIC_POOL_API_URL=http://lido-app_server_1:2019
-      - PUBLIC_POOL_STRATUM_URL=${DEVICE_DOMAIN_NAME}:3333
+      - PUBLIC_POOL_STRATUM_URL=${DEVICE_DOMAIN_NAME}:2301
 
   server:
     # Our Nest pool fork (not upstream benjamin-wilson/public-pool)
@@ -24,8 +24,8 @@ services:
     restart: on-failure
     stop_grace_period: 30s
     ports:
-      - "3333:3333/tcp"
-      - "4444:4444/tcp"
+      - "2301:3333/tcp"
+      - "2302:4444/tcp"
     volumes:
       - "${APP_DATA_DIR}/data/database:/public-pool/DB"
     environment:

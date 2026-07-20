@@ -4,8 +4,8 @@ name: Lido
 tagline: "#2BGA"
 icon: https://cdn.discordapp.com/app-icons/1526849434456035378/cc8d9a154117cbd3456624858a51629e.png?size=256
 category: bitcoin
-version: "0.1.29"
-port: 3000
+version: "0.1.30"
+port: 2300
 description: >-
   Lido is an open-source, solo Bitcoin mining application that lets you run your
   own pool using your own node. Instead of relying on centralized pools, Lido
@@ -23,9 +23,10 @@ description: >-
   Bitcoin node, then Lido, and it's ready to go.
 
 
-  To start mining, just point your mining hardware to your Lido instance using
-  the stratum details provided in the app. Monitor hashrate, connected workers,
-  network difficulty, and more from the dashboard.
+  To start mining, point your mining hardware at your Lido instance using the
+  stratum details in the app (host port 2301 for Stratum V1, 2302 for Stratum
+  V2). Monitor hashrate, connected workers, network difficulty, and more from
+  the dashboard.
 developer: Lido
 website: https://github.com/KevinGuest/lido-app
 submitter: Kevin Guest
@@ -34,8 +35,8 @@ repo: https://github.com/KevinGuest/lido-app
 support: https://github.com/KevinGuest/lido-app/issues
 gallery: []
 releaseNotes: >-
-  Fix Settings block height (RPC blocks field) and live logs
-  through Umbrel proxy. Pool 0.1.15 + UI 0.1.27.
+  Align host ports with the App Store package: web 2300, SV1 2301, SV2 2302.
+  Re-point miners after updating.
 dependencies:
   - bitcoin
 path: ""
