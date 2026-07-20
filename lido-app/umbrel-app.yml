@@ -32,9 +32,9 @@ description: >-
   stratum details in the app (host port 2301 for Stratum V1, 2302 for Stratum
   V2). Monitor hashrate, connected workers, network difficulty, and more from
   the dashboard.
-developer: Lido
+developer: Kevin Guest
 website: https://github.com/KevinGuest/lido-app
-submitter: Kevin Guest
+submitter: KevinGuest
 submission: https://github.com/KevinGuest/lido-app
 repo: https://github.com/KevinGuest/lido-app
 support: https://github.com/KevinGuest/lido-app/issues
