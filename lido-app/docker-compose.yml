@@ -7,9 +7,11 @@ services:
       APP_HOST: lido-app_proxy_1
       APP_PORT: 80
       PROXY_AUTH_WHITELIST: "/api/*"
+      # Keep pool/widgets public for the dashboard + home widgets; protect secrets & logs.
+      PROXY_AUTH_BLACKLIST: "/api/notifications/*,/api/logs,/api/logs/*,/api/info/sv2/authority/*"
 
   web:
-    image: ghcr.io/kevinguest/lido-ui:0.1.29
+    image: ghcr.io/kevinguest/lido-ui:0.1.30
     restart: on-failure
     stop_grace_period: 30s
     environment:
@@ -20,7 +22,7 @@ services:
 
   server:
     # Our Nest pool fork (not upstream benjamin-wilson/public-pool)
-    image: ghcr.io/kevinguest/lido:0.1.16
+    image: ghcr.io/kevinguest/lido:0.1.17
     restart: on-failure
     stop_grace_period: 30s
     ports:
