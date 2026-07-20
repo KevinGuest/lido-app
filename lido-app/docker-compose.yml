@@ -9,13 +9,13 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: ghcr.io/kevinguest/lido-ui:0.1.28
+    image: ghcr.io/kevinguest/lido-ui:0.1.29
     restart: on-failure
     stop_grace_period: 30s
     environment:
       - DOMAIN=$DEVICE_DOMAIN_NAME
       # Next SSR talks to the pool on the Docker network; browser /api goes via nginx.
-      - PUBLIC_POOL_API_URL=http://lido-app_server_1:2019
+      - PUBLIC_POOL_API_URL=http://lido-app_server_1:2299
       - PUBLIC_POOL_STRATUM_URL=${DEVICE_DOMAIN_NAME}:2301
 
   server:
@@ -35,7 +35,7 @@ services:
       - BITCOIN_RPC_PASSWORD=${APP_BITCOIN_RPC_PASS}
       - BITCOIN_RPC_PORT=${APP_BITCOIN_RPC_PORT}
       - BITCOIN_RPC_TIMEOUT=10000
-      - API_PORT=2019
+      - API_PORT=2299
       - STRATUM_PORT=3333
       - ENABLE_STRATUM_V2=true
       - STRATUM_V2_PORT=4444

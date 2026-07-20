@@ -4,7 +4,7 @@ name: Lido
 tagline: "#2BGA"
 icon: https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/icon.png
 category: bitcoin
-version: "0.1.31"
+version: "0.1.32"
 port: 2300
 description: >-
   Lido is an open-source, solo Bitcoin mining application that lets you run your
@@ -44,8 +44,8 @@ gallery:
   - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/3.jpg
   - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/4.jpg
 releaseNotes: >-
-  Mobile-friendly dashboard, App Store ports (2300/2301/2302), gallery assets,
-  and quieter best-diff alerts. Pool 0.1.16 + UI 0.1.28.
+  Internal API on 2299 (contiguous with 2300–2302). UI 0.1.29 restores desktop
+  dialog widths and ships lido.wtf SEO. Pool 0.1.16.
 dependencies:
   - bitcoin
 path: ""
@@ -73,7 +73,7 @@ widgets:
   - id: "workers"
     type: "four-stats"
     refresh: "5s"
-    endpoint: "server:2019/api/widgets/workers"
+    endpoint: "server:2299/api/widgets/workers"
     link: ""
     example:
       type: "four-stats"
