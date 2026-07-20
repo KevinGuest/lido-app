@@ -15,7 +15,12 @@ description: >-
   miners. No fees. No middleman.
 
 
-  Lido is a Fully Open Source Solo Bitcoin Mining Pool fork of Public Pool.
+  Lido is a Fully Open Source Solo Bitcoin Mining Pool fork of Public Pool, with
+  a modern dashboard and Stratum V1 + V2.
+
+
+  Configure Discord and Telegram alerts for blocks found, struggling miners, and
+  optional pool digests—so you stay informed without watching the dashboard.
 
 
   On umbrelOS, Lido requires the Bitcoin app and is automatically configured to
@@ -33,7 +38,11 @@ submitter: Kevin Guest
 submission: https://github.com/KevinGuest/lido-app
 repo: https://github.com/KevinGuest/lido-app
 support: https://github.com/KevinGuest/lido-app/issues
-gallery: []
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+  - 4.jpg
 releaseNotes: >-
   Align host ports with the App Store package: web 2300, SV1 2301, SV2 2302.
   Re-point miners after updating.
