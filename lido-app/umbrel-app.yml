@@ -39,10 +39,10 @@ submission: https://github.com/KevinGuest/lido-app
 repo: https://github.com/KevinGuest/lido-app
 support: https://github.com/KevinGuest/lido-app/issues
 gallery:
-  - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/1.jpg
-  - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/2.jpg
-  - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/3.jpg
-  - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/4.jpg
+  - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/gallery-2880/1.png
+  - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/gallery-2880/2.png
+  - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/gallery-2880/3.png
+  - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/gallery-2880/4.png
 releaseNotes: >-
   Fix Settings notifications/logs 502 on Umbrel (refresh nginx on start),
   stop showing demo notification toast on API errors. UI 0.1.31 + pool 0.1.18.
