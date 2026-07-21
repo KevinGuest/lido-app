@@ -22,7 +22,7 @@ services:
 
   server:
     # Our Nest pool fork (not upstream benjamin-wilson/public-pool)
-    image: ghcr.io/kevinguest/lido:0.1.18
+    image: ghcr.io/kevinguest/lido:0.1.19
     restart: on-failure
     stop_grace_period: 30s
     ports:
