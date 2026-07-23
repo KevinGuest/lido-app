@@ -4,7 +4,7 @@ name: Lido
 tagline: "#2BGA"
 icon: https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/icon.png
 category: bitcoin
-version: "0.1.40"
+version: "0.1.41"
 port: 2300
 description: >-
   Lido is an open-source, solo Bitcoin mining application that lets you run your
@@ -15,8 +15,8 @@ description: >-
   miners. No fees. No middleman.
 
 
-  Lido is a Fully Open Source Solo Bitcoin Mining Pool fork of Public Pool, with
-  a modern dashboard and Stratum V1 + V2.
+  Lido is a fully open source solo bitcoin mining pool fork of Public Pool, with
+  a focused dashboard and Stratum V1 + V2.
 
 
   Configure Discord and Telegram alerts for blocks found, struggling miners, and
@@ -44,7 +44,8 @@ gallery:
   - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/gallery-2880/3.png
   - https://raw.githubusercontent.com/KevinGuest/lido-app/main/lido-app/gallery-2880/4.png
 releaseNotes: >-
-  Next.js 16.2.11 security update + React 19 theme boot fix. Pool 0.1.20 + UI 0.1.35.
+  Disable SV2 authority key rotation; Umbrel update checks track this package
+  (not lido-ui tags). Pool 0.1.20 + UI 0.1.39.
 dependencies:
   - bitcoin
 path: ""

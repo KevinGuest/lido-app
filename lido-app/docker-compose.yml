@@ -10,7 +10,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/pool,/api/pool/*"
 
   web:
-    image: ghcr.io/kevinguest/lido-ui:0.1.35
+    image: ghcr.io/kevinguest/lido-ui:0.1.39
     restart: on-failure
     stop_grace_period: 30s
     environment:
@@ -19,7 +19,7 @@ services:
       - PUBLIC_POOL_API_URL=http://lido-app_server_1:2299
       - PUBLIC_POOL_STRATUM_URL=${DEVICE_DOMAIN_NAME}:2301
       # App-store package version (update checks) — keep in sync with umbrel-app.yml.
-      - LIDO_APP_VERSION=0.1.40
+      - LIDO_APP_VERSION=0.1.41
 
   server:
     # Our Nest pool fork (not upstream benjamin-wilson/public-pool)
