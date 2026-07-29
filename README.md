@@ -34,3 +34,14 @@ Point miners at the Connect details in the app:
 - Umbrel home-screen widgets
 
 Images: `ghcr.io/kevinguest/lido-ui` + `ghcr.io/kevinguest/lido` (see `lido-app/docker-compose.yml` for pinned versions).
+
+## Version bump checklist
+
+When shipping a new Umbrel package release, update **all** of:
+
+1. `lido-app/umbrel-app.yml` → `version` + `releaseNotes`
+2. `lido-app/docker-compose.yml` → `LIDO_APP_VERSION` (must match manifest `version`)
+3. `lido-app/docker-compose.yml` → `web` / `server` image **tags and `@sha256:` digests**
+   - Resolve digests: `docker buildx imagetools inspect ghcr.io/kevinguest/lido:<tag>`
+   - Same for `lido-ui`
+4. Keep community `tagline: "#2BGA"` unless intentionally changing brand copy
